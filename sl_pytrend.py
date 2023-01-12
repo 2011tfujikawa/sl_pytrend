@@ -19,21 +19,21 @@ data2["初期データ"]=0
 data2["データエラー"]=0
 #print(data2.head(2).append(data2.tail(2)))
 keyword=["ワールドカップ"]
-print(keyword,tf)
+#print(keyword,tf)
 
 pdPF=data2["初期データ"].copy()
 #print("pdPF",pdPF.head(2).append(pdPF.tail(2)))
 
 pdPF_out=pdPF
 #print("c",(pd.DataFrame(pdPF_out)).columns[0],pdPF_out.head(1))
-print("pdPF_out",pdPF_out.head(2).append(pdPF_out.tail(2)))
+#print("pdPF_out",pdPF_out.head(2).append(pdPF_out.tail(2)))
     
 with st.form("my_form", clear_on_submit=False):
     name = st.text_input('検索キーワード',value=str(keyword[0]))
     ST = st.date_input('From', value=start)
     ED = st.date_input('To', value=end)
     submitted = st.form_submit_button("調査")
-     
+    tf=str(ST)+str(" ")+str(ED)
      
 if submitted:
     keyword[0]=name
