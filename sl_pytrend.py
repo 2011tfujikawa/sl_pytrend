@@ -8,7 +8,7 @@ from pytrends.request import TrendReq
 end = datetime.date.today()
 start = datetime.date(2017,1,1)
 #pytrends_12m = TrendReq(hl='JP')
-pytrend = TrendReq(hl='JP',retries=3)
+pytrend = TrendReq(hl='JP',retries=3, proxies=['https://34.203.233.13:80',])
 
 tf=str(start)+str(" ")+str(end)
 print("------------------------------------------")
